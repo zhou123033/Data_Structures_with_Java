@@ -1,0 +1,2 @@
+public class MyHashMap3 {
+}
