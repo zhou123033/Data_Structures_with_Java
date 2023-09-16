@@ -47,6 +47,19 @@ public class BSTTree1 {
         return null;
     }
 
+    private Object doGet(BSTNode node, int key) {
+        if (node == null) {
+            return null; // 没找到
+        }
+        if (key < node.key) {
+            return doGet(node.left, key); // 向左找
+        } else if (key > node.key) {
+            return doGet(node.right, key); // 向右找
+        } else {
+            return node.value; // 找到了
+        }
+    }
+
     /**
      * 查找最小关键字对应的值
      * @return 关键字对应的值
@@ -188,21 +201,70 @@ public class BSTTree1 {
      * 根据关键字删除
      * @param key - 关键字
      * @return 被删除关键字对应值
+     *
+     * 情况1. 删除节点没有左孩子，将右孩子托孤给Parent
+     * 情况2. 删除节点没有右孩子，将左孩子托孤给Parent
      */
     public Object delete(int key) {
-        return null;
+        BSTNode p = root; // 被删除节点 p
+        BSTNode parent = null;
+        while (p != null) {
+            if (key < p.key) {
+                parent = p;
+                p = p.left;
+            } else if (key > p.key) {
+                parent = p;
+                p = p.right;
+            } else {
+                break;
+            }
+        }
+        if (p == null) {
+            return null;
+        }
+        // 删除操作
+        if (p.left == null) {
+            // 情况1
+            shift(parent, p, p.right);
+        } else if (p.right == null) {
+            // 情况2
+            shift(parent, p, p.left);
+        } else {
+            // 情况4
+            //4.1 被删除节点找后继
+            BSTNode s = p.right;
+            BSTNode sParent = p; // 后继节点的父节点
+            while (s.left != null) {
+                sParent = s;
+                s = s.left;
+            }
+            // 后继节点即为 s
+            if (sParent != p) { // 不相邻
+                // 4.2 如果删除节点和后继节点不相邻，则处理后继节点的后事
+                shift(sParent, s, s.right); // 不可能有左孩子节点
+                s.right = p.right;
+            }
+            //4.3 后继节点取代被删除节点
+            shift(parent, p, s);
+            s.left = p.left;
+        }
+        return p.value;
     }
 
-    private Object doGet(BSTNode node, int key) {
-        if (node == null) {
-            return null; // 没找到
-        }
-        if (key < node.key) {
-            return doGet(node.left, key); // 向左找
-        } else if (key > node.key) {
-            return doGet(node.right, key); // 向右找
+    /**
+     * 托孤方法
+     * @param parent - 被删除节点的父节点
+     * @param deleted - 被删除节点
+     * @param child - 被顶上去的节点
+     */
+    private void shift(BSTNode parent, BSTNode deleted, BSTNode child) {
+        if (parent == null) {
+            root = child;
+        } else if (deleted == parent.left) {
+            parent.left = child;
         } else {
-            return node.value; // 找到了
+            parent.right = child;
         }
+
     }
 }
