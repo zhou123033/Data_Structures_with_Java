@@ -1,78 +1,49 @@
 import java.util.Iterator;
 
-public class LinkedListStack<E> implements Stack<E>, Iterable<E> {
+/**
+ * 下压堆栈 (链表实现) - Stack
+ */
+public class LinkedListStack<Item> implements Iterable<Item> {
 
-    private static class Node<E> {
-        E value;
-        Node<E> next;
-
-        public Node(E value, Node<E> next) {
-            this.value = value;
-            this.next = next;
-        }
+    private Node first; // 栈顶 (最近添加的元素)
+    private int N;      // 元素数量
+    private class Node {
+        // 定义了节点的嵌套类
+        Item item;
+        Node next;
     }
-
-    private int capacity = Integer.MAX_VALUE;
-    private int size = 0;
-    private Node<E> head = new Node<>(null, null);
-
-    public LinkedListStack(int capacity) {
-        this.capacity = capacity;
+    public boolean isEmpty() {return N == 0;}
+    public int size() {return N;}
+    public void push(Item item) {
+        // 向栈顶添加元素
+        Node oldfirst = first;
+        first = new Node();
+        first.item = item;
+        first.next = oldfirst;
+        N++;
     }
-
-    @Override
-    public boolean push(E value) {
-        if (isFull()) {
-            return false;
-        }
-        head.next = new Node<>(value, head.next);
-        size++;
-        return true;
-    }
-
-    @Override
-    public E pop() {
-        if (isEmpty()) {
-            return null;
-        }
-        Node<E> first = head.next;
-        head.next = first.next;
-        size--;
-        return first.value;
+    public Item pop() {
+        // 从栈顶删除元素
+        Item item = first.item;
+        first = first.next;
+        N--;
+        return item;
     }
 
     @Override
-    public E peek() {
-        if (isEmpty()) {
-            return null;
-        }
-        return head.next.value;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    @Override
-    public boolean isFull() {
-        return size == capacity;
-    }
-
-    @Override
-    public Iterator<E> iterator() {
-        return new Iterator<E>() {
-            Node<E> p = head.next;
+    public Iterator<Item> iterator() {
+        return new Iterator<Item>() {
+            Node p = first.next;
             @Override
             public boolean hasNext() {
                 return p != null;
             }
 
             @Override
-            public E next() {
-                E value = p.value;
+            public Item next() {
+                Item item = p.item;
                 p = p.next;
-                return value;
+                return item;
             }
         };
     }

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f5678bfa-38ab-486a-99dd-f803c601e369" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../HashTable/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashTable/.idea/HashTable.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashTable/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashTable/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashTable/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HashTable/HashTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../二分查找/BinarySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../二叉搜索树-BST/.idea/二叉搜索树-BST.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../平衡二叉搜索树-AVL/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../平衡二叉搜索树-AVL/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../平衡二叉搜索树-AVL/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../平衡二叉搜索树-AVL/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../平衡二叉搜索树-AVL/.idea/平衡二叉搜索树-AVL.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../平衡二叉搜索树-AVL/AVLTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../排序算法/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../排序算法/BubbleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../排序算法/HeapSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../排序算法/SelectionSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../排序算法/demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../排序算法/insertionSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../栈/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../栈/FixedCapacityStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../栈/ResizingArrayStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../红黑树/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../红黑树/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../红黑树/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../红黑树/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../红黑树/.idea/红黑树.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../红黑树/RedBlackTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Data_Structures_with_Java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Data_Structures_with_Java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../二分查找/.idea/二分查找.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../二分查找/.idea/二分查找.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../二叉搜索树-BST/BSTTree1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../二叉搜索树-BST/BSTTree1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../栈/.idea/栈.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../栈/.idea/栈.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../栈/LinkedListStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../栈/LinkedListStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../栈/out/production/栈/.idea/栈.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../栈/out/production/栈/.idea/栈.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../栈/out/production/栈/InfixToSuffix.class" beforeDir="false" afterPath="$PROJECT_DIR$/../栈/out/production/栈/InfixToSuffix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../队列/LinkedListQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../队列/LinkedListQueue.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$PROJECT_DIR$/../../CS61B/library-sp21/javalib" />
+        <option name="usePluginRegistry" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2VyCIVxQKIdHNtHLemPCMcSLEmY" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/josh/Documents/Data_Structures_with_Java/背包",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f5678bfa-38ab-486a-99dd-f803c601e369" name="Changes" comment="" />
+      <created>1695798853322</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695798853322</updated>
+      <workItem from="1695798854411" duration="4152000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

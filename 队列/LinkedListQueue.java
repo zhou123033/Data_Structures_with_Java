@@ -1,7 +1,6 @@
 import Queue.Queue;
 
 import java.util.Iterator;
-import java.util.LinkedList;
 
 public class LinkedListQueue<E> implements Queue<E>, Iterable<E> {
 
