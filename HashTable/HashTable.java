@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -12,9 +11,10 @@ import java.util.Arrays;
  * 2. 允许编号适当重复，通过数据自身来进行区分
  */
 public class HashTable {
+
     // 节点类
     static class Entry {
-        int hash; // 哈希码
+        int hash; // 哈希code
         Object key; // 键
         Object value; // 值
         Entry next;
@@ -103,16 +103,14 @@ public class HashTable {
                         } else {
                             aHead = p;
                         }
-                        // 分配到 a
-                        a = p;
+                        a = p; // 分配到 a
                     } else {
                         if (b != null) {
                             b.next = p;
                         } else {
                             bHead = p;
                         }
-                        // 分配到 b
-                        b = p;
+                        b = p; // 分配到 b
                     }
                     p = p.next;
                 }
@@ -186,6 +184,15 @@ public class HashTable {
             }
         }
         System.out.println(Arrays.toString(sums));
+    }
+
+    /* 数组长度是 2 的 n 次方 */
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            Object obj = new Object();
+            System.out.println(obj.hashCode());
+        }
     }
 }
 

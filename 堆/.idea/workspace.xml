@@ -5,40 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ef694ec-0ae9-460b-99fd-f15f4e2ec01c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../优先级队列/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../优先级队列/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../优先级队列/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../优先级队列/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../优先级队列/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../优先级队列/.idea/优先级队列.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../优先级队列/PriorityQueue1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../优先级队列/Queue/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../双端队列/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../双端队列/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../双端队列/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../双端队列/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../双端队列/.idea/双端队列.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../双端队列/ArrayDeque1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../双端队列/Deque.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../双端队列/LinkedListDeque.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MaxHeap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../栈/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../栈/.idea/栈.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../栈/ArrayStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../栈/InfixToSuffix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../栈/LinkedListStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../栈/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../栈/out/production/栈/.idea/栈.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../队列/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../队列/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../队列/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../队列/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../队列/.idea/队列.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../队列/ArrayQueue1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../队列/ArrayQueue2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../队列/LinkedListQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../队列/Queue/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../优先级队列/MaxPQ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../优先级队列/Priority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../优先级队列/PriorityQueue2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/堆/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/堆/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/堆/MaxHeap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/堆/MaxHeap.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,9 +35,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2VKPZTbs64vpGwwRwRMQEXuwZXd" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -84,7 +56,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -97,10 +69,17 @@
       <option name="presentableId" value="Default" />
       <updated>1694581853429</updated>
       <workItem from="1694581854508" duration="10422000" />
+      <workItem from="1696301965629" duration="776000" />
+      <workItem from="1696390217455" duration="904000" />
+      <workItem from="1696705647188" duration="4012000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -3,6 +3,8 @@
  */
 public class BSTTree2<K extends Comparable<K>, V> {
 
+    BSTNode<K, V> root;
+
     static class BSTNode<K, V> {
         K key;
         V value;
@@ -26,9 +28,10 @@ public class BSTTree2<K extends Comparable<K>, V> {
         }
     }
 
-    BSTNode<K, V> root;
-
     public V get(K key) {
+        if (key == null) { // 避免空指针异常
+            return null;
+        }
         BSTNode<K, V> p = root;
         while (p != null) {
             // 比较 key 和 p.key

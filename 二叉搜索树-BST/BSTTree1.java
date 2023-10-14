@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * Binary Search Tree 二叉搜索树
@@ -38,7 +37,7 @@ public class BSTTree1 {
      * @param key - 关键字
      * @return 关键字对应的值
      */
-    public Object get(int key) {
+    public Object get(int key) { // 非递归的 get 方法
         BSTNode node = root;
         while (node != null) {
             if (key < node.key) {
@@ -52,7 +51,11 @@ public class BSTTree1 {
         return null;
     }
 
-    private Object doGet(BSTNode node, int key) {
+    public Object getRecursive(int key) { // 递归 get 方法
+        return doGet(root, key);
+    }
+
+    private Object doGet(BSTNode node, int key) { // get方法的递归版本
         if (node == null) {
             return null; // 没找到
         }
@@ -74,7 +77,7 @@ public class BSTTree1 {
     }
 
     // 查找任意一个节点作为起点的子树中最小值
-    public Object min(BSTNode node) {
+    public Object min(BSTNode node) { // 非递归的 min 方法
         if (node == null) {
             return null;
         }
@@ -83,6 +86,20 @@ public class BSTTree1 {
             p = p.left;
         }
         return p.value;
+    }
+
+    public Object minRecursive() {
+        return doMin(root);
+    }
+
+    public Object doMin(BSTNode node) { // 递归 min 方法
+        if (node == null) {
+            return null;
+        }
+        if (node.left == null) { // 最小的节点
+            return node.value;
+        }
+        return doMin(node.left);
     }
 
     /**
@@ -110,7 +127,7 @@ public class BSTTree1 {
      * @param key - 关键字
      * @param value - 对应值
      */
-    public void put(int key, Object value) {
+    public void put(int key, Object value) { // 非递归
         BSTNode node = root;
         BSTNode parent = null;
         while (node != null) {

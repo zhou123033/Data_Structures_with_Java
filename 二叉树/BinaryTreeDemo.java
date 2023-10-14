@@ -1,7 +1,45 @@
+import java.util.LinkedList;
+
 public class BinaryTreeDemo {
     public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
-        TreeNode node = new TreeNode(1);
+        TreeNode root = new TreeNode(
+                new TreeNode(new TreeNode(4), 2, null),
+                1,
+                new TreeNode(new TreeNode(5), 3, new TreeNode(6))
+        );
+
+        /* 迭代遍历二叉树的模板 */
+        LinkedList<TreeNode> stack = new LinkedList<>();
+
+        TreeNode curr = root; // 代表当前节点
+        TreeNode pop = null; // 最近一次弹栈的元素
+        while (!stack.isEmpty() || curr != null) {
+            if (curr != null) {
+                stack.push(curr);
+                // 待处理左子树
+                System.out.println("前: " + curr.val);
+                curr = curr.left;
+            } else {
+                TreeNode peek = stack.peek();
+                // 没有右子树
+                if (peek.right == null) {
+                    System.out.println("中: " + peek.val);
+                    pop = stack.pop();
+                    System.out.println("后: " + pop.val);
+                }
+                // 右子树处理完成
+                else if (peek.right == pop) {
+                    pop = stack.pop();
+                    System.out.println("后: " + pop.val);
+                }
+                // 待处理右子树
+                else {
+                    System.out.println("中: " + peek.val);
+                    curr = peek.right;
+                }
+            }
+        }
     }
 }
 
@@ -17,7 +55,7 @@ class BinaryTree {
      * 前序遍历
      * @param node - 节点
      */
-    public void preOrder(TreeNode node) {
+    static void preOrder(TreeNode node) {
         if (node == null) {
             return;
         }
@@ -30,7 +68,7 @@ class BinaryTree {
      * 中序遍历
      * @param node - 节点
      */
-    public void infixOrder(TreeNode node) {
+    static void infixOrder(TreeNode node) {
         if (node == null) {
             return;
         }
@@ -43,7 +81,7 @@ class BinaryTree {
      * 后序遍历
      * @param node - 节点
      */
-    public void postOrder(TreeNode node) {
+    static void postOrder(TreeNode node) {
         if (node == null) {
             return;
         }
@@ -63,7 +101,7 @@ class TreeNode {
         this.val = val;
     }
 
-    public TreeNode(int val, TreeNode left, TreeNode right) {
+    public TreeNode(TreeNode left, int val, TreeNode right) {
         this.val = val;
         this.left = left;
         this.right = right;
