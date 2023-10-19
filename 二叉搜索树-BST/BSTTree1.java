@@ -1,3 +1,4 @@
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -186,13 +187,13 @@ public class BSTTree1 {
     }
 
     /**
-     * 查找关键字的前驱值
+     * 查找 key 关键字的前驱节点的值
      * @param key - 关键字
      * @return 前驱值
      */
     public Object predecessor(int key) {
         /*
-            情况1: 节点有左子树，此时前任就是左子树的最大值
+            情况1: 节点有左子树，此时前任节点就是左子树的最大值
             情况2: 节点没有左子树，若离它最近的、自左而来的祖先就是前任
          */
         BSTNode p = root;
@@ -220,12 +221,18 @@ public class BSTTree1 {
     }
 
     /**
-     * 根据关键字删除
+     * 根据 key 关键字删除
      * @param key - 关键字
      * @return 被删除关键字对应值
      *
-     * 情况1. 删除节点没有左孩子，将右孩子托孤给Parent
-     * 情况2. 删除节点没有右孩子，将左孩子托孤给Parent
+     * 情况1. 被删除节点没有左孩子，将右孩子托孤给Parent
+     * 情况2. 被删除节点没有右孩子，将左孩子托孤给Parent
+     * 情况3. 被删除节点左右孩子都没有，已经被涵盖在情况1和情况2当中，把 null 托孤给 parent
+     * 情况4. 被删除节点左右孩子都有，可以将它的后继节点(称为S)托孤给 Parent，再称S的父亲为
+     *       SP，又分两种情况:
+     *       1. SP 就是被删除节点，此时 D 与 S 紧邻，只需要将 S 托孤给 Parent
+     *       2. SP 不是被删除节点，此时 D 与 S 不相邻，此时需要将 S 的后代托孤给 SP，再将
+     *          S 托孤给 Parent
      */
     public Object delete(int key) {
         BSTNode p = root; // 被删除节点 p
@@ -260,9 +267,9 @@ public class BSTTree1 {
                 sParent = s;
                 s = s.left;
             }
-            // 后继节点即为 s
-            if (sParent != p) { // 不相邻
-                // 4.2 如果删除节点和后继节点不相邻，则处理后继节点的后事
+            // 循环结束，找到后继节点即为 s
+            if (sParent != p) { // s 与被删除节点 p 不相邻
+                // 4.2 如果被删除节点和后继节点不相邻，则处理后继节点的孩子
                 shift(sParent, s, s.right); // 不可能有左孩子节点
                 s.right = p.right;
             }
@@ -282,20 +289,68 @@ public class BSTTree1 {
     private void shift(BSTNode parent, BSTNode deleted, BSTNode child) {
         if (parent == null) {
             root = child;
-        } else if (deleted == parent.left) {
+        } else if (deleted == parent.left) { // 被删除节点是 parent 的左节点
             parent.left = child;
-        } else {
+        } else { // 被删除节点是 parent 的右节点
             parent.right = child;
         }
     }
 
+    /**
+     * delete 方法的递归实现
+     * @param key 关键字
+     * @return 被删除关键字对应值
+     */
+    public Object deleteRecursive(int key) {
+        ArrayList<Object> result = new ArrayList<>(); // 保存被删除节点的值
+        root = doDelete(root, key, result);
+        return result.isEmpty() ? null : result.get(0);
+    }
+
+    /**
+     * 递归 delete 方法
+     * @param node 递归删除的起点节点
+     * @param key 关键字
+     * @return 把 待删除节点 删除后剩下的子节点 或 null
+     */
+    private BSTNode doDelete(BSTNode node, int key, ArrayList<Object> result) {
+        if (node == null) {
+            return null;
+        }
+        if (key < node.key) {
+            node.left = doDelete(node.left, key, result);
+            return node;
+        } else if (key > node.key) {
+            node.right = doDelete(node.right, key, result);
+            return node;
+        }
+        result.add(node.value);
+        // 情况1 - 只有右孩子
+        if (node.left == null) {
+            return node.right;
+        }
+        // 情况2 - 只有左孩子
+        if (node.right == null) {
+            return node.left;
+        }
+        // 情况3 - 有两个孩子 (找被删除节点的后继节点)
+        BSTNode s = node.right;
+        while (s.left != null) {
+            s = s.left;
+        }
+        s.right = doDelete(node.right, s.key, new ArrayList<>());
+        s.left = node.left;
+        return s;
+    }
+
+    /* 范围查询 */
     // 中序遍历
 
-    // 找 < key 的所有 value
+    // 找 小于 key 的所有 value
     public List<Object> less(int key) {
         ArrayList<Object> result = new ArrayList<>();
         BSTNode p = root;
-        LinkedList<BSTNode> stack = new LinkedList<>();
+        LinkedList<BSTNode> stack = new LinkedList<>(); // 栈记录所经过的节点
         while (p != null || !stack.isEmpty()) {
             if (p != null) {
                 stack.push(p);
@@ -314,7 +369,7 @@ public class BSTTree1 {
         return result;
     }
 
-    // 找 > key 的所有value
+    // 找 大于 key 的所有value
     public List<Object> greater(int key) {
         ArrayList<Object> result = new ArrayList<>();
         BSTNode p = root;
