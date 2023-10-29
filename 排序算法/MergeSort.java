@@ -2,66 +2,55 @@ import java.util.Arrays;
 
 @SuppressWarnings("all")
 
-public class MergeSort {
+class MergeSort {
 
-    private static int[] aux;  // 归并所需的辅助数组
+    // 用于辅助合并有序数组
+    private static int[] temp;
 
-    public static void sort(int[] a) {
-        aux = new int[a.length];  // 一次性分配空间
-        sort(a, 0, a.length - 1);
+    public static void sort(int[] nums) {
+        // 先给辅助数组开辟内存空间
+        temp = new int[nums.length];
+        // 排序整个数组（原地修改）
+        sort(nums, 0, nums.length - 1);
     }
 
-    // 自顶向下的归并排序
-    public static void sort(int[] a, int lo, int hi) {
-        // 将数组a[lo..hi]排序
-        if (hi <= lo) return;
-        int mid = (lo + hi) / 2;
-        sort(a, lo, mid); // 将左半边排序
-        sort(a, mid+1, hi); // 将右半边排序
-        merge(a, lo, mid, hi); // 归并结果
+    // 定义：将子数组 nums[lo..hi] 进行排序
+    private static void sort(int[] nums, int lo, int hi) {
+        if (lo == hi) {
+            // 单个元素不用排序
+            return;
+        }
+        // 这样写是为了防止溢出，效果等同于 (hi + lo) / 2
+        int mid = lo + (hi - lo) / 2;
+        // 先对左半部分数组 nums[lo..mid] 排序
+        sort(nums, lo, mid);
+        // 再对右半部分数组 nums[mid+1..hi] 排序
+        sort(nums, mid + 1, hi);
+        // 将两部分有序数组合并成一个有序数组
+        merge(nums, lo, mid, hi);
     }
 
-    // 原地归并的抽象方法
-    public static void merge(int[] a, int lo, int mid, int hi) {
-
-        // 将 a[lo..mid] 和 a[mid+1..hi] 归并
-        int i = lo;
-        int j = mid+1;
-
-        for (int k = lo; k <= hi; k++) { // 将a[lo..hi]复制到aux[lo..hi]
-            aux[k] = a[k];
+    // 将 nums[lo..mid] 和 nums[mid+1..hi] 这两个有序数组合并成一个有序数组
+    private static void merge(int[] nums, int lo, int mid, int hi) {
+        // 先把 nums[lo..hi] 复制到辅助数组中
+        // 以便合并后的结果能够直接存入 nums
+        for (int i = lo; i <= hi; i++) {
+            temp[i] = nums[i];
         }
 
-        for (int k = lo; k <= hi; k++) { // 归并回到a[lo..hi]
-            if (i > mid) {
-                a[k] = aux[j++];
-            } else if (j > hi) {
-                a[k] = aux[i++];
-            } else if (aux[j] < aux[i]) {
-                a[k] = aux[j++];
+        // 数组双指针技巧，合并两个有序数组
+        int i = lo, j = mid + 1;
+        for (int p = lo; p <= hi; p++) {
+            if (i == mid + 1) {
+                // 左半边数组已全部被合并
+                nums[p] = temp[j++];
+            } else if (j == hi + 1) {
+                // 右半边数组已全部被合并
+                nums[p] = temp[i++];
+            } else if (temp[i] > temp[j]) {
+                nums[p] = temp[j++];
             } else {
-                a[k] = aux[i++];
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        int[] a = {9, 8, 7, 6, 5, 4, 3, 2, 1};
-        System.out.println(Arrays.toString(a));
-        sort(a);
-        System.out.println(Arrays.toString(a));
-    }
-}
-
-class MergeBU {
-    public static int[] aux;
-
-    public static void sort(int[] a) {
-        int N = a.length;
-        aux = new int[N];
-        for (int sz = 1; sz < N; sz = sz + sz) { // sz子数组大小
-            for (int lo = 0; lo < N-sz; lo += sz+sz) { // lo:子数组索引
-                MergeSort.merge(a, lo, lo+sz-1, Math.min(lo+sz+sz-1, N-1));
+                nums[p] = temp[i++];
             }
         }
     }
