@@ -5,25 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd17b304-a2d0-4d21-bef3-73ee6916af6b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/IO流.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Directory_.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FileInformation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-4.13.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IO流/.idea/IO流.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IO流/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IO流/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IO流/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IO流/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IO流/Directory_.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IO流/FileInformation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/IO流/news4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../排序算法/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../排序算法/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/123.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FileCopy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FileInputStreamTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FileOutputStreamTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/IO流/FileInputStreamTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/IO流/FileOutputStreamTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../比较器/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../比较器/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../比较器/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../比较器/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../比较器/.idea/比较器.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../比较器/comparable/ComparableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../比较器/out/production/比较器/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../比较器/out/production/比较器/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../比较器/out/production/比较器/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../比较器/out/production/比较器/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../比较器/out/production/比较器/.idea/比较器.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../比较器/out/production/比较器/comparable/ComparableTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-4.13.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/news4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IO流/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IO流/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IO流/lib/hamcrest-core-1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IO流/lib/junit-4.13.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/IO流/news4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IO流/news4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../队列和栈/MyArrayDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/../队列和栈/MyArrayDeque.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +88,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.Directory_.m3">
+  <component name="RunManager">
     <configuration name="Directory_.m1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IO流" />
       <option name="PACKAGE_NAME" value="" />
@@ -120,8 +129,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileInputStream_.readFile01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IO流" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FileInputStream_" />
+      <option name="METHOD_NAME" value="readFile01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileInputStream_.readFile01" />
         <item itemvalue="JUnit.Directory_.m3" />
         <item itemvalue="JUnit.Directory_.m1" />
         <item itemvalue="JUnit.FileInformation.create03" />
@@ -137,7 +157,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698614456829</updated>
-      <workItem from="1698614457955" duration="4723000" />
+      <workItem from="1698614457955" duration="15654000" />
     </task>
     <servers />
   </component>

@@ -47,7 +47,7 @@ public class MyArrayDeque<E> {
     // 从尾部插入元素
     public void addLast(E e) {
         if (size == data.length) {
-            resize(size * 2);
+            resize(data.length * 2);
         }
 
         if (last == data.length) {
