@@ -14,7 +14,7 @@ public class FileInputStreamTest {
     @Test
     public void readFile01() {
         String filePath =
-                "/Users/josh/Documents/Data_Structures_with_Java/IO流/news4.txt";
+                "E:\\GitHub\\Data_Structures_with_Java\\IO流\\news4.txt";
         int readData = 0;
         FileInputStream fileInputStream = null;
         try {
