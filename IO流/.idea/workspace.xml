@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd17b304-a2d0-4d21-bef3-73ee6916af6b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileInputStreamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileInputStreamTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IO流/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IO流/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IO流/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IO流/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IO流/123.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IO流/123.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IO流/Directory_.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IO流/Directory_.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IO流/FileCopy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IO流/FileCopy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IO流/FileInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IO流/FileInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IO流/FileInputStreamTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IO流/FileInputStreamTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IO流/FileOutputStreamTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IO流/FileOutputStreamTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="bd17b304-a2d0-4d21-bef3-73ee6916af6b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +127,7 @@
       <updated>1698614456829</updated>
       <workItem from="1698614457955" duration="15654000" />
       <workItem from="1699170772761" duration="785000" />
-      <workItem from="1699217029023" duration="633000" />
+      <workItem from="1699217029023" duration="1252000" />
     </task>
     <servers />
   </component>
