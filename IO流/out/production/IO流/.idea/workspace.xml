@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd17b304-a2d0-4d21-bef3-73ee6916af6b" name="Changes" comment="">
+    <list default="true" id="8d629bba-3bef-4334-a0b3-ef1c43a5e95c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/IO流/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Algorithms-4th-Edition.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FileInputStreamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileInputStreamTest.java" afterDir="false" />
@@ -17,6 +19,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/IO流/FileInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IO流/FileInformation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IO流/FileInputStreamTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IO流/FileInputStreamTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/IO流/FileOutputStreamTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IO流/FileOutputStreamTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../算法 第四版.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,27 +54,19 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/GitHub/Data_Structures_with_Java/IO流&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/josh/Documents/Data_Structures_with_Java/IO流",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.FileInputStreamTest">
     <configuration name="FileInputStreamTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FileInputStreamTest" />
@@ -140,7 +135,7 @@
       <updated>1698614456829</updated>
       <workItem from="1698614457955" duration="15654000" />
       <workItem from="1699170772761" duration="785000" />
-      <workItem from="1699217029023" duration="633000" />
+      <workItem from="1699217029023" duration="1252000" />
     </task>
     <servers />
   </component>
