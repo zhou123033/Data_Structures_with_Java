@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75d601fd-0161-4559-9528-0ad275bddbe8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../进程和线程/CpuNum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../进程和线程/Thread03.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../进程和线程/exit_/ThreadExit_.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../进程和线程/threaduse/Thread01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../进程和线程/threaduse/Thread02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="75d601fd-0161-4559-9528-0ad275bddbe8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
