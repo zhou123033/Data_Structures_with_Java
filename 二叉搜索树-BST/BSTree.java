@@ -1,4 +1,3 @@
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -6,7 +5,7 @@ import java.util.List;
 /**
  * Binary Search Tree 二叉搜索树
  */
-public class BSTTree1 {
+public class BSTree {
 
     BSTNode root; // 根节点
 
