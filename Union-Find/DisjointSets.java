@@ -3,7 +3,7 @@ import java.util.Arrays;
 /**
  * DisjointSets Interface - The code comes from CS61B Textbook
  */
-public interface DisjointSet {
+public interface DisjointSets {
     /** connects two items P and Q */
     void connect(int p, int q);
 
