@@ -14,16 +14,21 @@ public class QuickUnionDS implements DisjointSets{
      * which returns the root of the tree item is in.
      */
     private int find(int p) {
-        
+        while (parent[p] >= 0) {
+            p = parent[p];
+        }
+        return p;
     }
 
     @Override
     public void connect(int p, int q) {
-
+        int i = find(p);
+        int j = find(q);
+        parent[i] = j;
     }
 
     @Override
     public boolean isConnected(int p, int q) {
-        return false;
+        return find(p) == find(q);
     }
 }
