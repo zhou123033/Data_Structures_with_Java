@@ -12,8 +12,7 @@ public class BSTree {
     public static class BSTNode {
         int key;
         Object value;
-        BSTNode left;
-        BSTNode right;
+        BSTNode left, right; // 指向子树的指针
 
         public BSTNode(int key) {
             this.key = key;
@@ -123,8 +122,8 @@ public class BSTree {
     }
 
     /**
-     * 存储关键字和对应值
-     * @param key - 关键字
+     * 存储(插入)关键字和对应值 非递归实现
+     * @param key - 键
      * @param value - 对应值
      */
     public void put(int key, Object value) { // 非递归
@@ -156,33 +155,27 @@ public class BSTree {
     }
 
     /**
-     * 查找关键字的后继值
-     * @param key - 关键字
-     * @return 后继值
+     * put 方法的递归实现
+     * @param key - 要存储的键
+     * @param value - 对应的值
      */
-    public Object successor(int key) {
-        BSTNode p = root;
-        BSTNode ancestorFromRight = null;
-        while (p != null) {
-            if (key < p.key) {
-                ancestorFromRight = p;
-                p = p.left;
-            } else if (key > p.key) {
-                p = p.right;
-            } else {
-                break;
-            }
+    public void putRecursive(int key, Object value) {
+        // 查找 key，找到则更新它的值，否则为它创建一个新的节点
+        root = doPut(root, key, value);
+    }
+    // helper function
+    private BSTNode doPut(BSTNode node, int key, Object value) {
+        // 如果 key 已经存在于以 node 为根节点的子树中，则更新它的值
+        // 否则将以 key 和 value 为键值对的新节点插入到该子树中
+        if (node == null) return new BSTNode(key, value);
+        if (key < node.key) {
+            node.left = doPut(node.left, key, value);
+        } else if (key > node.key) {
+            node.right = doPut(node.right, key, value);
+        } else {
+            node.value = value;
         }
-        // 没找到节点
-        if (p == null) {
-            return null;
-        }
-        // 找到节点 -> 情况1: 节点有右子树，此时后任就是右子树的最小值
-        if (p.right != null) {
-            return min(p.right);
-        }
-        // 找到节点 -> 情况2: 节点没有右子树，若离它最近的、自右而来的祖先就是后任
-        return ancestorFromRight != null ? ancestorFromRight.value : null;
+        return node;
     }
 
     /**
@@ -220,6 +213,36 @@ public class BSTree {
     }
 
     /**
+     * 查找关键字的后继值
+     * @param key - 关键字
+     * @return 后继值
+     */
+    public Object successor(int key) {
+        BSTNode p = root;
+        BSTNode ancestorFromRight = null;
+        while (p != null) {
+            if (key < p.key) {
+                ancestorFromRight = p;
+                p = p.left;
+            } else if (key > p.key) {
+                p = p.right;
+            } else {
+                break;
+            }
+        }
+        // 没找到节点
+        if (p == null) {
+            return null;
+        }
+        // 找到节点 -> 情况1: 节点有右子树，此时后任就是右子树的最小值
+        if (p.right != null) {
+            return min(p.right);
+        }
+        // 找到节点 -> 情况2: 节点没有右子树，若离它最近的、自右而来的祖先就是后任
+        return ancestorFromRight != null ? ancestorFromRight.value : null;
+    }
+
+    /**
      * 根据 key 关键字删除
      * @param key - 关键字
      * @return 被删除关键字对应值
@@ -227,7 +250,7 @@ public class BSTree {
      * 情况1. 被删除节点没有左孩子，将右孩子托孤给Parent
      * 情况2. 被删除节点没有右孩子，将左孩子托孤给Parent
      * 情况3. 被删除节点左右孩子都没有，已经被涵盖在情况1和情况2当中，把 null 托孤给 parent
-     * 情况4. 被删除节点左右孩子都有，可以将它的后继节点(称为S)托孤给 Parent，再称S的父亲为
+     * 情况4. 被删除节点左右孩子都有，可以将它的后继节点(称为S)托孤给 Parent，称 S 的父亲为
      *       SP，又分两种情况:
      *       1. SP 就是被删除节点，此时 D 与 S 紧邻，只需要将 S 托孤给 Parent
      *       2. SP 不是被删除节点，此时 D 与 S 不相邻，此时需要将 S 的后代托孤给 SP，再将
@@ -307,7 +330,7 @@ public class BSTree {
     }
 
     /**
-     * 递归 delete 方法
+     * 递归 delete 方法的 helper function
      * @param node 递归删除的起点节点
      * @param key 关键字
      * @return 把 待删除节点 删除后剩下的子节点 或 null
