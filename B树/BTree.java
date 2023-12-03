@@ -79,7 +79,36 @@ public class BTree {
     public boolean contains(int key) {
         return root.get(key) != null;
     }
+
     // 2. 新增 方法
+    /**
+     * 首先查找本节点中的插入位置 i, 如果没有空位(key 被找到), 应该
+     * 走更新的逻辑. 接下来分两种情况：
+     * 如果节点是叶子节点，可以直接插入了
+     * 如果节点是非叶子节点，需要继续在 children[i] 处继续递归插入
+     * 无论哪种情况，插入完成后都可能超过节点 keys 数目限制，此时应当
+     * 执行节点分裂
+     */
+    public void put(int key) {
+        doPut(root, key);
+    }
+    private void doPut(Node node, int key) {
+        int i = 0;
+        while (i < node.keyNumber) {
+            if (node.keys[i] == key) {
+                return; // 更新, 这里key没有value, 所以直接return
+            }
+            if (node.keys[i] > key) {
+                break; //找到了插入位置，即为此时的 i
+            }
+            i++;
+        }
+        if (node.leaf) {
+            node.insertKey(key, i);
+        } else {
+            doPut(node.children[i], key);
+        }
+    }
 
     // 3. 删除 方法
 }
