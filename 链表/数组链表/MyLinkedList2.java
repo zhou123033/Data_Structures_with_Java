@@ -1,3 +1,5 @@
+package 数组链表;
+
 import java.util.NoSuchElementException;
 
 // 单链表实现

@@ -1,3 +1,5 @@
+package 链表;
+
 import java.util.Iterator;
 
 /**
@@ -7,7 +9,7 @@ public class DoublyLinkedListSentinel2 implements Iterable<Integer> {
 
     @Override
     public Iterator<Integer> iterator() {
-        return new Iterator<Integer>() {
+        return new Iterator<>() {
 
             Node p = sentinel.next; // 遍历的起点是第一个节点
 

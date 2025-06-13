@@ -1,4 +1,5 @@
-import java.util.Arrays;
+package 链表;
+
 import java.util.NoSuchElementException;
 
 public class RecursiveList<E> {

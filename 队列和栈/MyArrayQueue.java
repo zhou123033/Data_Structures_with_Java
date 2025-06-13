@@ -1,3 +1,5 @@
+package 队列和栈;
+
 import java.util.NoSuchElementException;
 
 /** 用数组实现队列，需要用到双端队列原理中的环形数组技巧 */

@@ -1,3 +1,5 @@
+package 链表;
+
 import java.util.Iterator;
 
 public class SinglyLinkedList implements Iterable<Integer> { // 整体

@@ -1,3 +1,5 @@
+package 栈;
+
 import java.util.Iterator;
 
 public class ArrayStack<E> implements Stack<E>, Iterable<E> {

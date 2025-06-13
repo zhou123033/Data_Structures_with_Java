@@ -1,3 +1,5 @@
+package 队列和栈;
+
 import java.util.NoSuchElementException;
 
 /** 双端队列的实现 */

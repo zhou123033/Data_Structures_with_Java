@@ -1,3 +1,5 @@
+package 队列和栈;
+
 public class MyLinkedQueue<E> {
     private MyLinkedList<E> list = new MyLinkedList<>();
 

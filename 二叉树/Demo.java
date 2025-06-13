@@ -1,3 +1,5 @@
+package 二叉树;
+
 import java.util.LinkedList;
 
 public class Demo {

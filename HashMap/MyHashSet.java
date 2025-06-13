@@ -1,3 +1,5 @@
+package HashMap;
+
 import java.util.HashMap;
 
 /** HashSet 底层就是一个 HashMap，其中键就是 Set 中的元素，值用一个占位符即可 */

@@ -1,8 +1,10 @@
+package 队列和栈;
+
 import java.util.NoSuchElementException;
 
 public class MyArrayStack<E> {
 
-    private MyArrayList<E> arr = new MyArrayList<>();
+    private 数组链表.MyArrayList<E> arr = new 数组链表.MyArrayList<>();
 
     public void push(E e) {
         arr.addLast(e);

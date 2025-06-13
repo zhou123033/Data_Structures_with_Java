@@ -1,3 +1,5 @@
+package 栈;
+
 public interface Stack<E> {
 
     boolean push(E value);
